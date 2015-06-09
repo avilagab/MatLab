@@ -168,6 +168,8 @@ if plot_popup
     xlabel('time (s)')
     title('Datos EEG - AF3')
     
+% Cálculo de FFT para señal AF3
+    
     NFFT = 2^nextpow2(end_time); % Next power of 2 from length of y
     Y = fft(salida,NFFT)/end_time;
     f = sampFreq/2*linspace(0,1,NFFT/2+1);
